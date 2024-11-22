@@ -6,6 +6,9 @@
         "use": "@vercel/node",
         "config": {
             "includeFiles": "./prisma/prisma/dev.sqlite"
+        },
+        "hooks": {
+            "build": "npx prisma generate"
         }
       }
     ],
@@ -14,9 +17,6 @@
         "src": "/(.*)",
         "dest": "index.js"
       }
-    ],
-    "hooks": {
-        "build": "npx prisma generate"
-    }
+    ]
   }
   
