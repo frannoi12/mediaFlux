@@ -7,9 +7,7 @@
         "config": {
             "includeFiles": "./prisma/prisma/dev.sqlite"
         },
-        "hooks": {
-            "build": "npx prisma generate"
-        }
+        "build": "npx prisma generate"
       }
     ],
     "routes": [
