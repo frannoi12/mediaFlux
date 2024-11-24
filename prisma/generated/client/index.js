@@ -139,7 +139,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
@@ -149,17 +149,16 @@ const config = {
     "db"
   ],
   "activeProvider": "sqlite",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
-        "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "fromEnvVar": null,
+        "value": "file:./prisma/dev.sqlite"
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Media {\n  id          Int     @id @default(autoincrement())\n  title       String  @unique\n  description String?\n  mediaPath   String\n  status      Boolean @default(false)\n}\n",
-  "inlineSchemaHash": "91ea97ede4c3445307a02adf46fda4a96954f36b6892e6aa89c213d7f1fdfede",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = \"file:./prisma/dev.sqlite\"\n}\n\nmodel Media {\n  id          Int     @id @default(autoincrement())\n  title       String  @unique\n  description String?\n  mediaPath   String\n  status      Boolean @default(false)\n}\n",
+  "inlineSchemaHash": "d3cea9f13577de8a6ac797fc7769e1e56d62035f1f30b49bea809f5a07b3071a",
   "copyEngine": true
 }
 

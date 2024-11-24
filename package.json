@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "vercel-build": "dotenv -e .env -- prisma generate && prisma migrate deploy && next build",
     "start": "nodemon index.js",
     "test": "its test"
   },
