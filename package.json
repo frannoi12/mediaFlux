@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "its test",
-    "prisma:generate": "prisma generate",
+    "prisma:generate": "npx prisma generate",
     "build": "npm run prisma:generate && vercel build"
   },
   "author": "frannois",
