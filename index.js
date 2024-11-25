@@ -13,16 +13,14 @@ app.use(express.json());
 const mediaRouter = new MediaRouter();
 app.use("/media", mediaRouter.getRouter());
 
-
-
 // Swagger Documentation
 swaggerDocs(app);
 
 
+// app.use("/",(req,res)=>{
+//   res.send("mon api")
+// })
 
-app.use("/",(req,res)=>{
-  res.send("mon api")
-})
 
 
 
