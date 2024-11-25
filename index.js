@@ -7,20 +7,22 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use("/",(req,res)=>{
-  res.send("mon api")
-})
+
 
 
 const mediaRouter = new MediaRouter();
 app.use("/media", mediaRouter.getRouter());
+
+
 
 // Swagger Documentation
 swaggerDocs(app);
 
 
 
-
+app.use("/",(req,res)=>{
+  res.send("mon api")
+})
 
 
 
