@@ -11,6 +11,10 @@
     ],
     "routes": [
       {
+        "src": "/",
+        "dest": "/docs"
+      },
+      {
         "src": "/(.*)",
         "dest": "index.js"
       }

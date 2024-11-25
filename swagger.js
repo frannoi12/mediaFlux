@@ -11,7 +11,7 @@ const options = {
         },
         servers: [
             {
-                url: "http://localhost:3000", // Adresse de votre API
+                url: process.env.API_URL || "http://localhost:3000",
             },
         ],
         components: {
@@ -55,5 +55,5 @@ const options = {
 const swaggerSpec = swaggerJsDoc(options);
 
 export function swaggerDocs(app) {
-    app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+    app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 }
