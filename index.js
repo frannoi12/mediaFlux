@@ -17,14 +17,16 @@ app.use("/media", mediaRouter.getRouter());
 swaggerDocs(app);
 
 
+
+
 // app.use("/",(req,res)=>{
 //   res.send("mon api")
 // })
 
 
+export default app;
 
 
-
-app.listen(PORT, () => {
-    console.log('Server is running on http://localhost:3000');
-  });
+// app.listen(PORT, () => {
+//     console.log('Server is running on http://localhost:3000');
+//   });
