@@ -7,7 +7,9 @@ const PORT = 3000;
 
 app.use(express.json());
 
-
+app.use("/",(req,res)=>{
+  res.send("mon api")
+})
 
 
 const mediaRouter = new MediaRouter();
