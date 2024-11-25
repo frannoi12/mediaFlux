@@ -19,9 +19,9 @@ swaggerDocs(app);
 
 
 
-// app.use("/",(req,res)=>{
-//   res.send("mon api")
-// })
+app.use("/",(req,res)=>{
+  res.send("Bienvenue sur mon api mediaFlux")
+})
 
 
 export default app;
