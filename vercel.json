@@ -9,11 +9,7 @@
         }
       }
     ],
-    "routes": [
-      {
-        "src": "/docs",
-        "dest": "./index.js"
-      },  
+    "routes": [  
       {
         "src": "/(.*)",
         "dest": "./index.js"
